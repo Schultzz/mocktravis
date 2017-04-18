@@ -23,6 +23,5 @@ notifications:
 after_success:
   - surge --project ./target/site --domain x123.surge.sh
 after_failure:
-  #Site folder is not created for failing tests, this will create a site Without test reports
-  - mvn clean test jacoco:report coveralls:report
-  - surge --project ./target/site --domain x123.surge.sh
+  #Remove documentation for a failing project
+  - surge teardown x123.surge.sh
