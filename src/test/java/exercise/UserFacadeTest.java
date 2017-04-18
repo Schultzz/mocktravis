@@ -29,6 +29,7 @@ public class UserFacadeTest {
     //LoginStatus res = facade.verifyUser("Jan", "abcde");
     
     //This will deliberately fail
+    
     LoginStatus res = facade.verifyUser("Jan", "XXXXXX");
     
     //Then

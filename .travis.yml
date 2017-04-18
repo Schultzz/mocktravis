@@ -15,13 +15,13 @@ before_install:
   
 script: 
   - mvn verify site
-  ##- mvn site
   
 notifications:
   email:
     - lam@cphbusiness.dk
 
 after_success:
+  - surge --project ./target/site --domain x123.surge.sh
+after_failure:
   ##- mvn clean test jacoco:report coveralls:report
- ## - mvn verify site
   - surge --project ./target/site --domain x123.surge.sh
