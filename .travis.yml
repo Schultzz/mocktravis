@@ -1,0 +1,25 @@
+language: java
+jdk: oraclejdk8
+
+#services:
+#  - mysql
+  
+cache:
+  directories:
+    #- node_modules
+    - $HOME/.m2
+  
+#before_install:
+#  - npm install 
+#  - mysql -e 'CREATE DATABASE usersDB;'
+  
+## Run Integration tests
+## script: "mvn verify"
+##script: 
+  #- mvn verify
+  ##- mvn site
+
+after_success:
+  ##- mvn clean test jacoco:report coveralls:report
+  - mvn verify site
+  ##- surge --project ./target/site --domain myxxx.surge.sh
