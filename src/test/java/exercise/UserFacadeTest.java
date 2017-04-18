@@ -27,7 +27,10 @@ public class UserFacadeTest {
     //Given (in setup)
     //When
     //LoginStatus res = facade.verifyUser("Jan", "abcde");
-    LoginStatus res = facade.verifyUser("Jan", "XXXX");
+    
+    //This will deliberately fail
+    LoginStatus res = facade.verifyUser("Jan", "XXXXXX");
+    
     //Then
     assertThat(res,is(LoginStatus.OK));
   }

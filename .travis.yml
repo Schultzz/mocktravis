@@ -18,6 +18,10 @@ cache:
 script: 
   - mvn verify 
   ##- mvn site
+  
+notifications:
+  email:
+    - lam@cphbusiness.dk
 
 #after_success:
   ##- mvn clean test jacoco:report coveralls:report
