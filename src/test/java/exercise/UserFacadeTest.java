@@ -26,7 +26,8 @@ public class UserFacadeTest {
   public void authenticateOK(){
     //Given (in setup)
     //When
-    LoginStatus res = facade.verifyUser("Jan", "abcde");
+    //LoginStatus res = facade.verifyUser("Jan", "abcde");
+    LoginStatus res = facade.verifyUser("Jan", "XXXX");
     //Then
     assertThat(res,is(LoginStatus.OK));
   }
