@@ -15,11 +15,11 @@ cache:
   
 ## Run Integration tests
 ## script: "mvn verify"
-##script: 
-  #- mvn verify
+script: 
+  - mvn verify 
   ##- mvn site
 
-after_success:
+#after_success:
   ##- mvn clean test jacoco:report coveralls:report
-  - mvn verify site
+ ## - mvn verify site
   ##- surge --project ./target/site --domain myxxx.surge.sh
